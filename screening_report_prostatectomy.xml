@@ -1,0 +1,411 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" ColumnWidth="488" IsOptimalParagraphEnabled="True" IsHyphenationEnabled="True">
+
+  <Section FontSize="12">
+    <Paragraph>
+      <InlineUIContainer BaselineAlignment="Center">
+        <Image Source="logo.jpg" Height="40" />
+      </InlineUIContainer>
+      Prostate Center | Department of Urology
+    </Paragraph>
+  </Section>
+   <Section FontSize="24">
+    <Paragraph>
+      <Bold>Pathology Report</Bold>
+    </Paragraph>
+  </Section>
+  <Section FontSize="12">
+    <Paragraph FontWeight="Bold">
+      Journal Number:
+      <Run Text="{Binding JNR}" />
+    </Paragraph>
+  </Section>
+  <Section FontSize="12">
+    <Paragraph>
+      <Floater
+        Background="GhostWhite"
+        Width="300" HorizontalAlignment="Left"
+          >
+        <Table CellSpacing="5">
+          <Table.Columns>
+            <TableColumn Width="245"/>
+            <TableColumn Width="32"/>
+          </Table.Columns>
+
+          <TableRowGroup>
+            <TableRow FontSize="18">
+              <TableCell ColumnSpan="3">
+                <Paragraph>Summary</Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGoldenrodYellow" FontSize="12">
+              <TableCell>
+                <Paragraph>
+                  <Span BaselineAlignment="Center">
+                    <Bold>Presence of Prostate Cancer</Bold>
+                  </Span>
+                </Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="available.png" Height="32" Visibility="{Binding Findings[PCA],  Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGray" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">Presence of Gleason Pattern 3</Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="checked.png" Height="32" Visibility="{Binding Findings[GP3], UpdateSourceTrigger=PropertyChanged}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGoldenrodYellow" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">Presence of Gleason Pattern 4</Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="checked.png" Height="32" Visibility="{Binding Findings[GP4]}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGray" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">Presence of Gleason Pattern 5</Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="checked.png" Height="32" Visibility="{Binding Findings[GP5]}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGoldenrodYellow" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">Presence of Cribriform formation</Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="checked.png" Height="32" Visibility="{Binding Findings[CRI]}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGray" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">Presence of Ductal formation</Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="checked.png" Height="32" Visibility="{Binding Findings[DA]}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGoldenrodYellow" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">Presence of nerves and/or vessels in tumor area</Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="checked.png" Height="32" Visibility="{Binding Findings[VES_NERV]}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGray" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">Morphology similar to High-grade prostatic intraepithelial neoplasia</Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="checked.png" Height="32" Visibility="{Binding Findings[HGPIN]}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGoldenrodYellow" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">Presence of inflammation in tumor area</Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="checked.png" Height="32" Visibility="{Binding Findings[INF]}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGray" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">
+                  Relative tumor volume (%):
+                </Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph FontSize="14">
+                  <Run Text="{Binding RTVol}" />
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGoldenrodYellow" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">
+                  Lobe involvement:
+                </Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <Run Text="{Binding LobeSideInvolvment}" />
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGray" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">
+                  tumor extent in margin zone 1:
+                </Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="available.png" Height="32" Visibility="{Binding ECE}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGoldenrodYellow" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">
+                   tumor extent in margin zone 2:
+                </Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="available.png" Height="32" Visibility="{Binding RStatus}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGray" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">
+                  Likely multifocal tumor 
+                </Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Image Source="checked.png" Height="32" Visibility="{Binding Multifocality}"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+              </TableRow>
+            <TableRow Background="LightGoldenrodYellow" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">
+                  Prostate volume (ccm):
+                </Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <TextBox Name="prostatevolume" Text="{Binding PVol}" Height="24" Width="32" AcceptsReturn="False" TextWrapping="NoWrap"  VerticalScrollBarVisibility="Disabled" SpellCheck.IsEnabled="false"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+            <TableRow Background="LightGray" FontSize="12">
+              <TableCell>
+                <Paragraph FontWeight="Bold">
+                  Absolute tumor volume (ccm):
+                </Paragraph>
+              </TableCell>
+              <TableCell>
+                <Paragraph>
+                  <InlineUIContainer BaselineAlignment="Center">
+                    <Label Name="TextAbsoluteTumorvolume" Content="{Binding AbsoluteTumorvolume}" Height="24" Width="56"/>
+                  </InlineUIContainer>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+             <TableRow>
+              <TableCell ColumnSpan="4">
+                <Paragraph FontSize="10" FontStyle="Italic">
+                  Information about the pipeline from the
+                  <Hyperlink
+                    NavigateUri="http://deepmedicine.ai"
+                      >DeepMedicine.AI</Hyperlink>
+                  web site. <LineBreak/>
+                </Paragraph>
+              </TableCell>
+            </TableRow>
+          </TableRowGroup>
+        </Table>
+      </Floater>
+    </Paragraph>
+  </Section>
+  <Section >
+    <Paragraph FontSize="12">
+      <InlineUIContainer>
+        <ListView BorderThickness="0" SelectedIndex="{Binding ElementName=ListView1, Path=DataContext.slider_value}" ItemsSource="{Binding Filenames}" Name="ListView1">
+          <ListView.View>
+            <GridView>
+              <GridViewColumn Header="Block ID"  Width="auto" DisplayMemberBinding="{Binding Key}"/>
+              <GridViewColumn Header="View the block" Width="auto">
+                <GridViewColumn.CellTemplate>
+                  <DataTemplate>
+                    <Button Content="View" Command="{Binding ElementName=ListView1, Path=DataContext.CallViewCommand}" CommandParameter="{Binding Value}"/>
+                  </DataTemplate>
+                </GridViewColumn.CellTemplate>
+              </GridViewColumn>
+            </GridView>
+          </ListView.View>
+        </ListView>
+      </InlineUIContainer>
+    </Paragraph>
+  </Section>
+  <Section >
+    <Paragraph FontSize="12">
+      <InlineUIContainer>
+        <ListView BorderThickness="0" ItemsSource="{Binding FindingForLesions}" Name="ListView2" SelectedIndex="{Binding ElementName=ListView2, Path=DataContext.SelectedLesionIndex}">
+          <ListView.View>
+            <GridView>
+              <GridViewColumn Header="Lesion ID"  Width="auto" DisplayMemberBinding="{Binding Key}"/>
+              <GridViewColumn Header="Findings" Width="auto" DisplayMemberBinding="{Binding Value}"/>
+          </GridView>
+          </ListView.View>
+        </ListView>
+      </InlineUIContainer>
+    </Paragraph>
+  </Section>
+
+  <Section>
+    <Paragraph>
+      <InlineUIContainer BaselineAlignment="Center">
+        <Grid Name="PlaceToViewImage" Width="512" Height="512">
+          <Image  Source="{Binding ImageToView}" Stretch="None" VerticalAlignment="Center" HorizontalAlignment="Left" />
+          <!-- Image above Image1 -->
+        </Grid>
+      </InlineUIContainer>
+    </Paragraph>
+    <Paragraph>
+      Apex
+  <InlineUIContainer >
+    <ToolBarTray DockPanel.Dock="Top" Background="White">
+      <ToolBar Background="White">
+        <StackPanel Name="Slide" VerticalAlignment="Center" Margin="10">
+          <Slider Name="Slider_Image" Width="512" Maximum="{Binding NumberOfBlockID}" Minimum="0" SmallChange="1" IsSnapToTickEnabled="True" Value="{Binding slider_value, Mode=TwoWay}"/>
+        </StackPanel>
+        </ToolBar>
+    </ToolBarTray>
+    </InlineUIContainer>
+      Base
+    </Paragraph>
+    <Paragraph>
+      TNM:
+      <InlineUIContainer BaselineAlignment="Center">
+        <StackPanel Margin="10" Orientation="Horizontal">
+          <ComboBox Name="T_Stage">
+            <ComboBoxItem IsSelected="True">pTx</ComboBoxItem>
+            <ComboBoxItem>pT2a</ComboBoxItem>
+            <ComboBoxItem >pT2b</ComboBoxItem>
+            <ComboBoxItem>pT2c</ComboBoxItem>
+            <ComboBoxItem>pT2</ComboBoxItem>
+            <ComboBoxItem>pT3a</ComboBoxItem>
+            <ComboBoxItem>pT3b</ComboBoxItem>
+            <ComboBoxItem>pT4</ComboBoxItem>
+          </ComboBox>
+          <ComboBox Name="N_Stage">
+            <ComboBoxItem IsSelected="True">pNx</ComboBoxItem>
+            <ComboBoxItem >pN0</ComboBoxItem>
+            <ComboBoxItem>pN1</ComboBoxItem>
+          </ComboBox>
+          <ComboBox Name="R_status">
+            <ComboBoxItem IsSelected="True">Rx</ComboBoxItem>
+            <ComboBoxItem >R0</ComboBoxItem>
+            <ComboBoxItem>R1</ComboBoxItem>
+          </ComboBox>
+        </StackPanel>
+      </InlineUIContainer>
+      Gleason Score:
+      <InlineUIContainer BaselineAlignment="Center">
+        <StackPanel>
+          <ComboBox Name="GleasonPatterns">
+            <ComboBoxItem IsSelected="True">N/A</ComboBoxItem>
+            <ComboBoxItem>3/3</ComboBoxItem>
+            <ComboBoxItem>3/4</ComboBoxItem>
+            <ComboBoxItem>4/3</ComboBoxItem>
+            <ComboBoxItem>4/4</ComboBoxItem>
+            <ComboBoxItem>3/5</ComboBoxItem>
+            <ComboBoxItem>4/5</ComboBoxItem>
+            <ComboBoxItem>5/5</ComboBoxItem>
+          </ComboBox>
+        </StackPanel>
+      </InlineUIContainer>
+      Tertiary Gleason pattern:
+      <InlineUIContainer BaselineAlignment="Center">
+        <StackPanel>
+          <ComboBox Name="TertiaryGleasonPatterns" Text="{Binding GP3}">
+            <ComboBoxItem IsSelected="True">N/A</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+          </ComboBox>
+        </StackPanel>
+      </InlineUIContainer>
+      Gleason Pattern 5:
+      <InlineUIContainer BaselineAlignment="Center">
+        <StackPanel>
+          <ComboBox Name="GleasonPattern5">
+            <ComboBoxItem IsSelected="True">Present</ComboBoxItem>
+            <ComboBoxItem>Absent</ComboBoxItem>
+          </ComboBox>
+        </StackPanel>
+      </InlineUIContainer>
+        1. Gleason Pattern (%):
+        <InlineUIContainer BaselineAlignment="Center">
+          <TextBox Name="gp1_frequency_txtbox" Text="{Binding GP1}" Height="24" Width="32" AcceptsReturn="False" TextWrapping="NoWrap"  VerticalScrollBarVisibility="Disabled" SpellCheck.IsEnabled="false"/>
+        </InlineUIContainer>
+        2. Gleason Pattern (%):
+        <InlineUIContainer BaselineAlignment="Center">
+          <TextBox Name="gp2_frequency_txtbox" Text="{Binding GP2}" Height="24" Width="32" AcceptsReturn="False" TextWrapping="NoWrap"  VerticalScrollBarVisibility="Disabled" SpellCheck.IsEnabled="false"/>
+        </InlineUIContainer>
+    </Paragraph>
+    <Paragraph>
+      Comment:
+    </Paragraph>
+    <Paragraph>
+    <InlineUIContainer BaselineAlignment="Center">
+        <TextBox Name="comment_txtbox" Text="{Binding Comment}" Height="48" Width="500" AcceptsReturn="True" TextWrapping="Wrap"  VerticalScrollBarVisibility="Auto" SpellCheck.IsEnabled="true"/>
+    </InlineUIContainer>
+    </Paragraph>
+    <Paragraph>
+      <Button Name="SaveCommand" Background="Green" Foreground="White">Save</Button>
+      <Button Name="FeedBackCommand">Feedback</Button>
+      <Button Name="CloseCommand">Close</Button>
+      Pathologist:
+      <ComboBox Name="Author">
+        <ComboBoxItem IsSelected="True">N/A</ComboBoxItem>
+        <ComboBoxItem >John Muestermann</ComboBoxItem>
+      </ComboBox>
+     </Paragraph>
+  </Section>
+  <Section>
+    
+  </Section>
+</FlowDocument>
