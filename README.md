@@ -1,2 +1,2 @@
 # cmdx_report
-Clone or download and then run it. Can run only under Windows OS.
+Clone or download it and then run the executable file. Can run only under Windows OS.
