@@ -27,9 +27,6 @@ The owner reserves the right to modify, suspend or discontinue, temporarily or p
 
 The Modifications to Application section is for apps that will be updated or regularly maintained. For the full disclosure section, create your own EULA.
 
-
-
-
 Term and Termination
 
 This Agreement shall remain in effect until terminated by you or the owner. 
@@ -49,6 +46,7 @@ Amendments to this Agreement
 The owner reserves the right, at its sole discretion, to modify or replace this Agreement at any time. If a revision is material we will provide at least 15 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
 
 Contact Information
+okyaz.eminaga@gmail.com
 
 If you have any questions about this Agreement, please contact us.
 
