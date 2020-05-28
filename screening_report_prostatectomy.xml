@@ -91,7 +91,7 @@
             </TableRow>
             <TableRow Background="LightGoldenrodYellow" FontSize="12">
               <TableCell>
-                <Paragraph FontWeight="Bold">Presence of Cribriform formation</Paragraph>
+                <Paragraph FontWeight="Bold">Presence of Cribriform pattern</Paragraph>
               </TableCell>
               <TableCell>
                 <Paragraph>
@@ -103,7 +103,7 @@
             </TableRow>
             <TableRow Background="LightGray" FontSize="12">
               <TableCell>
-                <Paragraph FontWeight="Bold">Presence of Ductal formation</Paragraph>
+                <Paragraph FontWeight="Bold">Presence of Ductal morphology</Paragraph>
               </TableCell>
               <TableCell>
                 <Paragraph>
@@ -309,7 +309,7 @@
     <ToolBarTray DockPanel.Dock="Top" Background="White">
       <ToolBar Background="White">
         <StackPanel Name="Slide" VerticalAlignment="Center" Margin="10">
-          <Slider Name="Slider_Image" Width="512" Maximum="{Binding NumberOfBlockID}" Minimum="0" SmallChange="1" IsSnapToTickEnabled="True" Value="{Binding slider_value, Mode=TwoWay}"/>
+          <Slider Name="Slider_Image" Width="512" Maximum="{Binding NumberOfBlockID}" Minimum="-1" SmallChange="1" IsSnapToTickEnabled="True" Value="{Binding slider_value, Mode=TwoWay}"/>
         </StackPanel>
         </ToolBar>
     </ToolBarTray>
