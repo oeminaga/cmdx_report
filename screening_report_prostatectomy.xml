@@ -5,7 +5,7 @@
       <InlineUIContainer BaselineAlignment="Center">
         <Image Source="logo.jpg" Height="40" />
       </InlineUIContainer>
-      Prostate Center | Department of Urology
+      Prostate Center
     </Paragraph>
   </Section>
    <Section FontSize="24">
