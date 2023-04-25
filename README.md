@@ -1,5 +1,5 @@
 # cMDX Pathology Report Viewer
-This reviewer is part of an automation pipeline that generates a summary report for radical prostatectomy specimens with prostate cancer. </br>
+This reviewer is a prototype and part of an automation pipeline that generates a summary report for radical prostatectomy specimens with prostate cancer. </br>
 
 Clone or download and then run the executable file. If you want to download, please download "cMDX_Reviewer.zip" and then unzip it.
 Requires Windows OS and the .Net framework.
